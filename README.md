@@ -3,28 +3,29 @@
 Deployment script for bartendro. One script should install everything needed.
 IMPORTANT: It is important to reboot right after the raspi-config command!
 
-Download and write the 2016-05-27 Raspian Jessie-list distro to an SD Card: 
+Download and write the 2020-02-13 Raspian Buster-lite distro to an SD Card: 
 
-  https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-05-31/2016-05-27-raspbian-jessie-lite.zip
+ https://downloads.raspberrypi.org/raspbian_lite_latest
 
-Boot the RPi and then log in as user 'pi' with password 'raspberry'. Then:
+Boot the RPi, write a file called ssh to the boot folder of the sd card, to access via SSH and then log in as user 'pi' with password 'raspberry'. Then:
 
 Run raspi-config:
-* Expand the filesystem
+* Advanced: Expand the filesystem
 * Startup: Boot into console, require password
-* Advanced: Disable console on serial port
-* Advanced: Enable I2C
+* Interfacing: Disable console on serial port, allow serial port
+* Interfacing: Enable I2C
+* Localisation: select timezone
 
 Finish raspi-config by allowing it to reboot. 
 
 Once the RPi comes back up, log in again and follow these steps:
 
 ```
-apt-get update
-apt-get install git
+sudo apt update
+sudo apt install git
 git clone https://github.com/arankwende/bartendro-config.git
 cd bartendro-config
-sudo install.sh
+sudo sh install.sh
 ```
 
 Once done rebooting, log into the RPi with user 'bartendro' and password 'hackme!'. 
