@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt-get update
-apt-get install -y --no-install-recommends nginx uwsgi uwsgi-plugin-python \
+apt update
+apt install -y --no-install-recommends nginx uwsgi uwsgi-plugin-python \
     python-dev python-smbus git-core python-pip python-setuptools python-wheel
 
 
