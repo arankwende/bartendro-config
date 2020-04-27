@@ -29,10 +29,16 @@ sudo sh install.sh
 ```
 
 Once done rebooting, log into the RPi with user 'bartendro' and password 'hackme!'. 
-Finally:
+The script includes a dummy wpa_supplicant.conf file, you need to go to /etc/wpa_supplicant/
+and do:
+sudo nano wpa_supplicant.conf
+to edit it, then modify the appropriate lines for your SSID, your Password and your country.
+Then save the file and reboot, your Bartendro should be live on the Wifi and ethernet interfaces.
+
+Finally, to delete pi user and just leave bartendro:
 
     sudo deluser --force --remove-home --remove-all-files pi
 
 From now you can no longer log in with the standard pi user. 
 
-In theory that should be it. Your SD card should be ready to rock.
+In theory that should be it. Your bartendro should work. You should however login and change the password with passwd.
