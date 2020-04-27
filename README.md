@@ -24,6 +24,7 @@ Once the RPi comes back up, log in again and follow these steps:
 
 ```
 sudo apt update
+sudo apt upgrade
 sudo apt install git
 git clone https://github.com/arankwende/bartendro-config.git
 cd bartendro-config
