@@ -36,7 +36,7 @@ finally, to delete pi user and just leave bartendro:
 
     sudo deluser --force --remove-home --remove-all-files pi
 
-From now you can no longer log in with the standard pi user. 
+From now on you can no longer log in with the standard pi user. 
 
 In theory that should be it. Your bartendro should work. You should however login through ssh and change the password with passwd.
 Remember, default admin user and pass for the bartendro website is bartendro and boozemeup you should also change those.
