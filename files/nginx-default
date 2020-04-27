@@ -16,7 +16,7 @@ server {
 # listen on the bartendro private wifi and redirect all traffic to bartendro
 # the server name here is always set the "bartendro".
 server {
-     listen      0.0.0.0:80;
+     listen      127.0.0.1:80;
      root        /usr/share/nginx/www;
      server_name bartendro bartendro.partyrobotics.com;
      access_log  /var/log/nginx/bartendro-combined.log combined;
@@ -33,7 +33,7 @@ server {
 }
 
 server {
-     listen 0.0.0.0:80 default_server;
+     listen 127.0.0.1:80 default_server;
      server_name _;
      rewrite     ^ http://bartendro.partyrobotics.com/? redirect;
 }
