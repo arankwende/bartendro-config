@@ -11,10 +11,12 @@ Boot the RPi, write a file called ssh to the boot folder of the sd card, to acce
 
 Run raspi-config:
 * Advanced: Expand the filesystem
-* Boot Options: B1:Boot into console, require password
+* Boot Options: B1 Boot into console, require password
 * Interfacing: P6 Disable console on serial port, allow serial port
 * Interfacing: P5 Enable I2C
-* Localisation: Change timezone
+* Localisation: I2 Change timezone - select yours
+* Localisation: I4 Change Wi-Fi Country - select yours
+* Network options: N2 Wi-Fi configure your Wi-Fi connection
 
 Finish raspi-config by allowing it to reboot. 
 
@@ -28,16 +30,8 @@ cd bartendro-config
 sudo sh install.sh
 ```
 
-Once done rebooting, log into the RPi with user 'bartendro' and password 'hackme!'. 
-The script includes a dummy wpa_supplicant.conf file, you need to go to /etc/wpa_supplicant/
-and do:
-```
-sudo nano wpa_supplicant.conf
-```
-to edit it, then modify the appropriate lines for your SSID, your Password and your country.
-Then save the file and reboot, your Bartendro should be live on the Wifi and ethernet interfaces.
-
-Finally, to delete pi user and just leave bartendro:
+Once done rebooting, log into the RPi with user 'bartendro' and password 'hackme!' and
+finally, to delete pi user and just leave bartendro:
 
     sudo deluser --force --remove-home --remove-all-files pi
 
