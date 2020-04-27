@@ -10,10 +10,7 @@ hostname bartendro
 # install the network/wifi setup files
 cp -v files/config.txt /boot
 cp -v files/sudoers /etc
-cp -v files/resolvconf.conf /etc
-cp -v files/hosts /etc/hosts
 cp -v files/interfaces /etc/network/interfaces
-cp -v files/iptables.rules /etc/iptables.rules
 cp -v files/rc.local /etc/rc.local
 cp -v files/hostname /etc
 cp -v files/sysctl.conf /etc
