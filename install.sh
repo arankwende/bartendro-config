@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install -y --no-install-recommends dnsmasq hostapd nginx uwsgi uwsgi-plugin-python \
+apt-get install -y --no-install-recommends nginx uwsgi uwsgi-plugin-python \
     python-dev python-smbus git-core python-pip python-setuptools python-wheel
 
 
@@ -10,16 +10,11 @@ hostname bartendro
 # install the network/wifi setup files
 cp -v files/config.txt /boot
 cp -v files/sudoers /etc
-cp -v files/dnsmasq.conf /etc
-cp -v files/dnsmasq /etc
 cp -v files/resolvconf.conf /etc
-cp -v files/hostapd.conf /etc/hostapd/hostapd.conf
-cp -v files/hostapd-default /etc/default/hostapd
 cp -v files/hosts /etc/hosts
 cp -v files/interfaces /etc/network/interfaces
 cp -v files/iptables.rules /etc/iptables.rules
 cp -v files/rc.local /etc/rc.local
-cp -v files/dhcpcd.conf /etc
 cp -v files/hostname /etc
 cp -v files/sysctl.conf /etc
 
