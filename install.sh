@@ -10,10 +10,9 @@ hostname bartendro
 # install the network/wifi setup files
 cp -v files/config.txt /boot
 cp -v files/sudoers /etc
-cp -v files/interfaces /etc/network/interfaces
 cp -v files/rc.local /etc/rc.local
 cp -v files/hostname /etc
-cp -v files/sysctl.conf /etc
+cp -v files/wpa_supplicant.conf /etc/wpa_supplicant/
 
 # create the bartendro user if need be
 sudo adduser -gecos 'Bartendro' --disabled-password bartendro
