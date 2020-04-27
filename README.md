@@ -11,10 +11,10 @@ Boot the RPi, write a file called ssh to the boot folder of the sd card, to acce
 
 Run raspi-config:
 * Advanced: Expand the filesystem
-* Startup: Boot into console, require password
-* Interfacing: Disable console on serial port, allow serial port
-* Interfacing: Enable I2C
-* Localisation: select timezone
+* Boot Options: B1:Boot into console, require password
+* Interfacing: P6 Disable console on serial port, allow serial port
+* Interfacing: P5 Enable I2C
+* Localisation: Change timezone
 
 Finish raspi-config by allowing it to reboot. 
 
