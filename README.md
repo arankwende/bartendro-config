@@ -31,7 +31,9 @@ sudo sh install.sh
 Once done rebooting, log into the RPi with user 'bartendro' and password 'hackme!'. 
 The script includes a dummy wpa_supplicant.conf file, you need to go to /etc/wpa_supplicant/
 and do:
+```
 sudo nano wpa_supplicant.conf
+```
 to edit it, then modify the appropriate lines for your SSID, your Password and your country.
 Then save the file and reboot, your Bartendro should be live on the Wifi and ethernet interfaces.
 
